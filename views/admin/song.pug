@@ -1,0 +1,13 @@
+extends ../layout
+
+block content
+    a.btn.btn-primary.margin-bottom.back-button(href='/admin/songs')
+        i.fa.fa-chevron-left
+        span Back
+
+    include song-message
+
+    form.margin-bottom(action='/admin/songs/' + song.id, method='post')
+        input(type='hidden', value=song.id)
+
+        include song-form

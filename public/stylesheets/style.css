@@ -1,0 +1,16 @@
+.page-wrapper {
+  padding-top: 32px !important;
+  padding-bottom: 32px !important;
+}
+
+.margin-bottom {
+  margin-bottom: 16px;
+}
+
+.back-button span {
+  margin-left: 8px;
+}
+
+.message-box {
+  padding: 16px 16px 8px;
+}

@@ -1,0 +1,25 @@
+extends ../layout
+
+block content
+    a.btn.btn-primary.margin-bottom.back-button(href='/admin/songs/new')
+        i.fa.fa-plus
+        span Add new
+
+    include song-message
+
+    table.table.table-striped.table-hover
+        thead
+            tr
+                th
+                th Name
+                th Category
+                th
+        tbody
+            each song in songs
+                tr(class=song.disabled ? 'danger' : '')
+                    td= song.id
+                    td= song.title
+                    td= song.category_name
+                    td
+                        a.btn.btn-primary(href='/admin/songs/' + song.id)
+                            span.glyphicon.glyphicon-edit

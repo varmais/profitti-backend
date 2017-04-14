@@ -1,0 +1,9 @@
+extends ../layout
+
+block content
+    a.btn.btn-primary.margin-bottom.back-button(href='/admin/songs')
+        i.fa.fa-chevron-left
+        span Back
+
+    form.margin-bottom(action='/admin/songs/', method='post')
+        include song-form

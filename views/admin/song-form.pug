@@ -1,0 +1,25 @@
+.form-group
+    label(for='title') Title
+    input#title.form-control(name='title', type='text', value=(song ? song.title : ''))
+
+.form-group
+    label(for='lyrics') Lyrics
+    textarea#lyrics.form-control(name='lyrics', rows='15')= (song ? song.lyrics : '')
+
+.form-group
+    label(for='category_id') Category
+    select#category_id.form-control(name='category_id')
+        each category in categories
+            option(value=category.id, selected= category.id == song && song.category_id)= category.name
+
+.form-group
+    label.checkbox-inline(for='dirty')
+        input#dirty(type='checkbox', checked=(song && song.dirty ? "checked" : undefined), name='dirty')
+        span Dirty
+
+.form-group
+    label.checkbox-inline(for='disabled')
+        input#disabled(type='checkbox', checked=(song && song.disabled ? "checked" : undefined), name='disabled')
+        span Disabled
+
+input.btn.btn-primary(type='submit', value='Save')
