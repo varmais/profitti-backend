@@ -6,11 +6,6 @@ import renderError from '../helpers/renderError';
 const router = express.Router();
 const ensureLoggedIn = ConnectEnsureLogin.ensureLoggedIn();
 
-router.get('*', (req, res, next) => {
-  console.log(req.user);
-  next();
-});
-
 router.get('*', ensureLoggedIn);
 
 router.get('/', (req, res) => {
