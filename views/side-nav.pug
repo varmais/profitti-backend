@@ -1,11 +1,12 @@
 .navbar-default.sidebar(role='navigation')
     .sidebar-nav.navbar-collapse
-        ul#side-menu.nav
-            li
-                a(href='/admin')
-                    i.fa.fa-dashboard.fa-fw
-                    |  Dashboard
-            li
-                a(href='/admin/songs')
-                    i.fa.fa-list.fa-fw
-                    |  Songs
+        if user
+            ul#side-menu.nav
+                li
+                    a(href='/admin')
+                        i.fa.fa-dashboard.fa-fw
+                        |  Dashboard
+                li
+                    a(href='/admin/songs')
+                        i.fa.fa-list.fa-fw
+                        |  Songs

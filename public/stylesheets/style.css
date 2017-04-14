@@ -14,3 +14,9 @@
 .message-box {
   padding: 16px 16px 8px;
 }
+
+.login {
+  width: 280px;
+  margin: 40px auto;
+  padding: 16px;
+}
