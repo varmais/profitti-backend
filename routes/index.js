@@ -6,4 +6,4 @@ export default (app) => {
   app.use('/api/songs', songs);
   app.use('/admin', admin);
   app.use('/', user);
-}
+};

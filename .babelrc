@@ -7,5 +7,12 @@
     "transform-class-properties",
     "transform-runtime",
     "add-module-exports"
-  ]
+  ],
+  "env": {
+    "test": {
+      "plugins": [
+        "rewire"
+      ]
+    }
+  }
 }

@@ -10,11 +10,11 @@ export default function setupPassport (passport) {
     return done(null, profile);
   });
 
-  passport.serializeUser(function(user, done) {
+  passport.serializeUser(function (user, done) {
     done(null, user);
   });
 
-  passport.deserializeUser(function(user, done) {
+  passport.deserializeUser(function (user, done) {
     done(null, user);
   });
 

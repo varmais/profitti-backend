@@ -1,5 +1,4 @@
-
-exports.up = function(knex) {
+exports.up = function (knex) {
   return knex.schema
     .createTable('Category', function (table) {
       table.increments('id').primary();
@@ -14,7 +13,7 @@ exports.up = function(knex) {
     });
 };
 
-exports.down = function(knex) {
+exports.down = function (knex) {
   return knex.schema
     .dropTableIfExists('Song')
     .dropTableIfExists('Category');
