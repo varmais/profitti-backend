@@ -9,23 +9,18 @@
             |
             a.navbar-brand(href='index.html') Profitti
         ul.nav.navbar-top-links.navbar-right
-            li.dropdown
-                a.dropdown-toggle(data-toggle='dropdown', href='#')
-                    i.fa.fa-user.fa-fw
-                    i.fa.fa-caret-down
-                ul.dropdown-menu.dropdown-user
-                    if user
-                        li
-                            a(href='/admin')
-                                i.fa.fa-user.fa-fw
-                                |  #{user.nickname}
-                        li.divider
-                        li
-                            a(href='/logout')
-                                i.fa.fa-sign-out.fa-fw
-                                |  Logout
-                    else
-                        li
-                            a(href='/login')
-                                i.fa.fa-sign-in.fa-fw
-                                |  Login
+            if user
+                li
+                    a(href='/admin')
+                        i.fa.fa-user.fa-fw
+                        |  #{user.nickname}
+                li.divider
+                li
+                    a(href='/logout')
+                        i.fa.fa-sign-out.fa-fw
+                        |  Logout
+            else
+                li
+                    a(href='/login')
+                        i.fa.fa-sign-in.fa-fw
+                        |  Login
